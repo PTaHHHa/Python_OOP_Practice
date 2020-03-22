@@ -12,19 +12,18 @@ import random
 
 
 class Unit:
-    def __init__(self, ID, team):
-        self.ID = ID
-        self.team = team
-
-
-class Hero(Unit):
-    def __init__(self, ID, name, team=None, lvl=1):
-        super().__init__(ID, team)
+    def __init__(self, ID, team=None):
         if team is None:
             team = []
             self.team = team
+        self.ID = ID
+
+
+class Hero(Unit):
+    def __init__(self, ID, name, team=None):
+        super().__init__(ID, team)
         self.name = name
-        self.lvl = lvl
+        self.lvl = 1
 
     def get_lvl(self):
         return self.lvl
@@ -38,7 +37,7 @@ class Hero(Unit):
     def count(self):
         return len(self.team)
 
-
+#hero3 = Hero()
 hero1 = Hero(1, "Gabe Newell")
 hero2 = Hero(2, "Tim Sweeney")
 soldiers_number = random.randint(1, 51)
