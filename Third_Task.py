@@ -37,7 +37,7 @@ class Hero(Unit):
     def count(self):
         return len(self.team)
 
-#hero3 = Hero()
+
 hero1 = Hero(1, "Gabe Newell")
 hero2 = Hero(2, "Tim Sweeney")
 soldiers_number = random.randint(1, 51)
